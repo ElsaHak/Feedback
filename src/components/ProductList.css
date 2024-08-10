@@ -1,0 +1,24 @@
+.product-list {
+    padding: 20px;
+  }
+  
+  .product-item {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .product-item h3 {
+    margin: 0;
+  }
+  
+  .product-item p {
+    color: #555;
+  }
+  
+  .product-item a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  

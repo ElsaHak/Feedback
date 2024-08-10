@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation, Outlet } from 'react-router-dom';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-function App() {
+import Navbar from './components/Navbar';
+import ProductList from './components/ProductList';
+import Feedbackform from './components/Feedbackform';
+import ProductSlider from './components/ProductSlider';
+import Feedbacklist from './components/Feedbacklist'; 
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<ProductList />} />
+          <Route path="/product/:productId/feedback" element={<Feedbackform />} />
+          <Route path="/product/:productId/feedback-list" element={<Feedbacklist />} /> 
+        </Route>
+      </Routes>
+    </Router>
+  );
+};
+
+const MainLayout = () => {
+  const location = useLocation();
+  const isFeedbackPage = location.pathname.includes('/feedback');
+
+  return (
+    <div>
+      <Navbar />
+      {!isFeedbackPage && <ProductSlider />}
+      
+      <Outlet />
     </div>
   );
-}
+};
 
 export default App;

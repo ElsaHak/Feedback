@@ -1,0 +1,23 @@
+/* ProductSlider.css */
+
+.product-slider {
+    width: 60%;
+    margin: auto;
+    margin-top: 5%;
+  }
+  
+  .slider-item {
+    height: 50vh; /* 30% of viewport height */
+    width: 100%;
+    overflow: hidden; /* Hide overflow content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slider-image {
+    width: 100%; /* Full width of the slider item */
+    height: 100%; /* Full height of the slider item */
+    /* object-fit: cover;  */
+  }
+  

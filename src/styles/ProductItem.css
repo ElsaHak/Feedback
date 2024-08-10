@@ -1,0 +1,53 @@
+.product-item {
+  width: 18%; /* Adjust width to fit 5 items per row with some margin */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1%; /* Adjust margin to fit 5 items properly */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding and borders are included in width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between elements */
+}
+
+.product-item img {
+  width: 100%;
+  height: 150px; /* Adjusted height to fit better */
+  object-fit: cover;
+}
+
+.product-item-content {
+  padding: 10px; /* Reduced padding to fit more content */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is spaced properly */
+  height: 100%;
+}
+
+.product-item-content h3 {
+  font-size: 1em; /* Adjusted font size */
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.product-item-content p {
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+}
+
+.feedback-link {
+  display: block;
+  text-align: center;
+  margin-top: auto; /* Push link to the bottom of the card */
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.feedback-link:hover {
+  background-color: #0056b3;
+}
